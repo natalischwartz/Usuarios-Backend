@@ -1,10 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
+//importando datos 
+const datos = require('../model/datos');
+
+
 // mostrar todos los usuarios
 
 router.get('/usuarios' , (req,res) =>{
-    res.send("Obteniendo usuarios")
+    res.render("usuariosPublico",{
+        data: datos
+    })
 })
 
 //obtener un usuario

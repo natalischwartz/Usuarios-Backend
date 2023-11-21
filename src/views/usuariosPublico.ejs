@@ -34,30 +34,23 @@
       <div class="container">
         <div class="row">
             <!--col-->
-            <div class="col">
+              <% data.forEach((usuario) => { %> 
+              <div class="col-3">
                 <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                    <img src="<%= usuario.imagen %>" class="card-img-top" alt="<%= usuario.nombre %>" >
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h2 class="card-title"> <%= usuario.nombre %> (<%= usuario.edad %>) </h2>
+                      <ul>
+                        <li><%= usuario.email %></li>
+                        <li><%= usuario.telefono %></li>
+                        <li><%= usuario.ciudad %></li>
+                      </ul>
+                      <a href="/usuarios/<%= usuario.id%>" class="btn btn-primary">Ver</a>
                     </div>
                   </div>
-
-
-
-
-
-
-
             </div>
-
-
-
-
-
+            <% }) %>
         </div>
-
       </div>
 
 

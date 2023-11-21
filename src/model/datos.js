@@ -6,7 +6,7 @@ const datosFalsos = [
         telefono: "+54 9 11 1234 5678",
         edad: 28,
         ciudad: "Buenos Aires",
-        imagen: "/avatar/1.png"
+        imagen: "./public/avatar/1.png"
     },
     {
         id: 2,
@@ -109,7 +109,7 @@ const datosFalsos = [
     }
 ];
 
-module.exports = {datosFalsos};
+module.exports = datosFalsos;
 
 
 

@@ -36,18 +36,26 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Ciudad</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Acciones</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
+              <% data.forEach(usuario =>{ %>
+                <tr>
+                  <td> <%= usuario.nombre %> </td>
+                  <td>  <%= usuario.email %> </td>
+                  <td> <%= usuario.telefono %> </td>
+                  <td> <%= usuario.edad %></td>
+                  <td> <%= usuario.ciudad %></td>
+                </tr>
+              <% }) %>
+              
             </tbody>
           </table>
 
