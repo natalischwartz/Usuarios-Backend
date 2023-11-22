@@ -1,12 +1,12 @@
 # Workshop usuarios NodeJs
 
-##Instalación
+## Instalación
 
 ```
 npm install
 ```
 
-##Ejecutar
+## Ejecutar
 
 ```
 npm run dev 
