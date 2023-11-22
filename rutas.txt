@@ -1,0 +1,12 @@
+GET usuarios ( publico , admin ) 
+
+
+GET usuarios/id ( en publico y admin )
+
+
+POST usuarios ( solo es parte de admin)
+
+
+DELETE usuario/id (admin )
+
+PUT usuario/id (admin)

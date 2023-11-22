@@ -1,12 +1,12 @@
 const datosFalsos = [
-    {
+    {//usuario
         id: 1,
         nombre: "Juan Pérez",
         email: "juan.perez@example.com",
         telefono: "+54 9 11 1234 5678",
         edad: 28,
         ciudad: "Buenos Aires",
-        imagen: "./public/avatar/1.png"
+        imagen: "/avatar/1.png"
     },
     {
         id: 2,

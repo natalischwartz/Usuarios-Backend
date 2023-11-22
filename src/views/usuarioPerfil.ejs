@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -33,54 +32,24 @@
         </div>
       </nav>
       <div class="container">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Email</th>
-                <th scope="col">Telefono</th>
-                <th scope="col">Edad</th>
-                <th scope="col">Ciudad</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% data.forEach(usuario =>{ %>
-                <tr>
-                  <td> <%= usuario.id %></td>
-                  <td> <%= usuario.nombre %> </td>
-                  <td>  <%= usuario.email %> </td>
-                  <td> <%= usuario.telefono %> </td>
-                  <td> <%= usuario.edad %></td>
-                  <td> <%= usuario.ciudad %></td>
-                  <td>
-                    <img src="<%= usuario.imagen %>" alt="" width="100">
-                  </td>
-                  <td>
-                    <a href="/admin/usuarios/<% usuario.id %>"><i class="bi bi-trash3"></i></a>
-                    <a href="/admin/usuarios/ <% usuario.id %>"><i class="bi bi-pencil"></i></a>
-                  </td>
-                </tr>
-              <% }) %>
-              
-            </tbody>
-          </table>
-
-
-
+        <div class="row">
+            <div class="col-6">
+                <img src=" <%= data.imagen %>" alt="<%= data.nombre %> ">
 
 
             </div>
-
-
-
-
-
+            <div class="col-6">
+                <h1> <%= data.nombre %> <%= data.edad %></h1>
+                <ul>
+                    <li><%= data.email %></li>
+                    <li><%= data.telefono %></li>
+                    <li><%= data.ciudad %></li>
+                </ul>
+            </div>
+            
         </div>
-
-      </div>
+            
+    </div>
 
 
 

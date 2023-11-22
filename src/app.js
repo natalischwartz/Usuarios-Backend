@@ -3,10 +3,12 @@ const app = express()
 const port = 3000
 
 const usuariosRoutes = require('./routes/usuariosRoutes');
-const usuariosAdmin = require('./routes/usuariosAdmin');
+const usuariosAdmin = require('./routes/adminRoutes');
 
-//middleware para archivos estaticos
-
+//Middlewares
+app.use(express.static("public"))
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 //Motor de plantilla
 app.set("view engine" , "ejs")

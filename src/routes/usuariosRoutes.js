@@ -16,9 +16,20 @@ router.get('/usuarios' , (req,res) =>{
 //obtener un usuario
 
 router.get('/usuarios/:id' , (req,res) =>{
-    res.send(`Obteniendo el usuario con id : ${req.params.id}`);
+    const usuario = datos.find((usuario) =>{
+        return usuario.id == req.params.id;
+    })
+    // console.log(usuario);
+    if (!usuario){ // si el objeto no existe 
+        return res.status(404).send("Usuario no encontrado")
+    }
+    res.render("usuarioPerfil" , {
+        data: usuario
+    }) // le mando la variable filtrada 
 
 })
+
+
 
 // Crear un usuario
 
